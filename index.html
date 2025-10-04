@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FeyyStore | Ecommerce Website Design</title>
+    <title>FoodMarket Feyy</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,22 +20,25 @@
                     <ul id="MenuItems">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="products.html">Products</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                         <li><a href="account.html">Account</a></li>
                     </ul>
                 </nav>
-                <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                <a href="cart.html">
+                    <img src="images/cart.png" width="30px" height="30px">
+                    <span id="cartBadge">0</span>
+                </a>
                 <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
             <div class="row">
                 <div class="col-2">
-                    <h1>Give Your Workout<br>A New Style!</h1>
-                    <p>Success isn’t always about greatness. It’s about consistency. Consistent<br>hard work gains success. Greatness will come.</p>
+                    <h1>Kelezatan terbaik untukmu dan keluarga ada di sini</h1>
+                    <p>Di FeyyStore, kami percaya makanan bukan sekadar kenyang, tapi juga momen kebersamaan.<br>Yuk, pilih menu favoritmu dan rasakan hangatnya sajian kami di setiap suapan.</p>
                     <a href="" class="btn">Explore Now &#8594;</a>
                 </div>
                 <div class="col-2">
-                    <img src="images/image1.png">
+                    <img src="images/img.png">
                 </div>
             </div>
         </div>
@@ -46,13 +49,13 @@
         <div class="small-container">
             <div class="row">
                 <div class="col-3">
-                    <img src="images/category-1.jpg">
+                    <img src="images/produk atas/1.png">
                 </div>
             <div class="col-3">
-                    <img src="images/category-2.jpg">
+                    <img src="images/produk atas/2.png">
             </div>
                 <div class="col-3">
-                    <img src="images/category-3.jpg">
+                    <img src="images/produk atas/3.png">
                 </div>
             </div>
         </div>
@@ -62,8 +65,10 @@
         <h2 class="title">Featured Products</h2>
         <div class="row">
             <div class="col-4">
-                <a href="produts-detai.html"><img src="images/product-1.jpg"></a>
-                <a href="produts-detai.html"></a><h4>Red Printed T-Shirt</h4>
+                <a href="products-detail1.html">
+                    <img src="images/product/1.png"></a>
+                <a href="produts-detai.html"></a>
+                <h4>Burger Premium</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -71,11 +76,13 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star-o"></i>
                 </div>
-                <p>$50.00</p>
+                <p>Rp 23.000</p>
             </div>
             <div class="col-4">
-                <img src="images/product-2.jpg">
-                <h4>Red Printed T-Shirt</h4>
+                <a href="products-detail2.html">
+                    <img src="images/product/2.png"></a>
+                <a href="produts-detai.html"></a>
+                <h4>Kentang Goreng</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -83,11 +90,13 @@
                     <i class="fa fa-star-half-o"></i>
                     <i class="fa fa-star-o"></i>
                 </div>
-                <p>$50.00</p>
+                <p>Rp 20.000</p>
             </div>
             <div class="col-4">
-                <img src="images/product-3.jpg">
-                <h4>Red Printed T-Shirt</h4>
+                <a href="products-detail3.html">
+                    <img src="images/product/3.png"></a>
+                <a href="produts-detai.html"></a>
+                <h4>Pizza Mozarella</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -95,11 +104,13 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star-half-o"></i>
                 </div>
-                <p>$50.00</p>
+                <p>Rp 60.000</p>
             </div>
             <div class="col-4">
-                <img src="images/product-4.jpg">
-                <h4>Red Printed T-Shirt</h4>
+                <a href="products-detail4.html">
+                    <img src="images/product/4.png"></a>
+                <a href="produts-detai.html"></a>
+                <h4>Donat Cruncy</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -107,14 +118,16 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star-o"></i>
                 </div>
-                <p>$50.00</p>
+                <p>Rp 15.000</p>
             </div>
         </div>
         <h2 class="title">Latest Products</h2>
         <div class="row">
             <div class="col-4">
-                <img src="images/product-5.jpg">
-                <h4>Red Printed T-Shirt</h4>
+                <a href="products-detail5.html">
+                    <img src="images/product/5.png"></a>
+                <a href="produts-detai.html"></a>
+                <h4>Oreo Creamy</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -122,11 +135,13 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star-o"></i>
                 </div>
-                <p>$50.00</p>
+                <p>Rp 20.000</p>
             </div>
             <div class="col-4">
-                <img src="images/product-6.jpg">
-                <h4>Red Printed T-Shirt</h4>
+                <a href="products-detail6.html">
+                    <img src="images/product/6.png"></a>
+                <a href="produts-detai.html"></a>
+                <h4>Coffee Latte</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -134,11 +149,13 @@
                     <i class="fa fa-star-half-o"></i>
                     <i class="fa fa-star-o"></i>
                 </div>
-                <p>$50.00</p>
+                <p>Rp 20.000</p>
             </div>
             <div class="col-4">
-                <img src="images/product-7.jpg">
-                <h4>Red Printed T-Shirt</h4>
+                <a href="products-detail7.html">
+                    <img src="images/product/7.png"></a>
+                <a href="produts-detai.html"></a>
+                <h4>Juz Stowberry</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -146,11 +163,13 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star-half-o"></i>
                 </div>
-                <p>$50.00</p>
+                <p>Rp 20.000</p>
             </div>
             <div class="col-4">
-                <img src="images/product-8.jpg">
-                <h4>Red Printed T-Shirt</h4>
+                <a href="products-detail8.html">
+                    <img src="images/product/8.png"></a>
+                <a href="produts-detai.html"></a>
+                <h4>Vanilla Latte</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -158,13 +177,15 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star-o"></i>
                 </div>
-                <p>$50.00</p>
+                <p>Rp 20.000</p>
             </div>
         </div>
         <div class="row">
             <div class="col-4">
-                <img src="images/product-9.jpg">
-                <h4>Red Printed T-Shirt</h4>
+                <a href="products-detail9.html">
+                    <img src="images/product/9.png"></a>
+                <a href="produts-detai.html"></a>
+                <h4>Paket ayam A</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -172,11 +193,13 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star-o"></i>
                 </div>
-                <p>$50.00</p>
+                <p>Rp 20.000</p>
             </div>
             <div class="col-4">
-                <img src="images/product-10.jpg">
-                <h4>Red Printed T-Shirt</h4>
+                <a href="products-detail10.html">
+                    <img src="images/product/10.png"></a>
+                <a href="produts-detai.html"></a>
+                <h4>Paket ayam B</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -184,11 +207,13 @@
                     <i class="fa fa-star-half-o"></i>
                     <i class="fa fa-star-o"></i>
                 </div>
-                <p>$50.00</p>
+                <p>Rp 25.000</p>
             </div>
             <div class="col-4">
-                <img src="images/product-11.jpg">
-                <h4>Red Printed T-Shirt</h4>
+                <a href="products-detail11.html">
+                    <img src="images/product/11.png"></a>
+                <a href="produts-detai.html"></a>
+                <h4>Paket ayam C</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -196,11 +221,13 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star-half-o"></i>
                 </div>
-                <p>$50.00</p>
+                <p>Rp 30.000</p>
             </div>
             <div class="col-4">
-                <img src="images/product-12.jpg">
-                <h4>Red Printed T-Shirt</h4>
+                <a href="products-detail12.html">
+                    <img src="images/product/12.png"></a>
+                <a href="produts-detai.html"></a>
+                <h4>Paket Jumbo</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -208,7 +235,7 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star-o"></i>
                 </div>
-                <p>$50.00</p>
+                <p>Rp 40.000</p>
             </div>
         </div>
     </div>
@@ -218,12 +245,12 @@
         <div class="small-container">
             <div class="row">
                 <div class="col-2">
-                    <img src="images/exclusive.png" class="offer-img">
+                    <img src="images/isklusife.png" class="offer-img">
                 </div>
                 <div class="col-2">
-                    <p>exclusively Avalible on ZeyyStore</p>
-                    <h1>Smart Band 4</h1>
-                    <small>The Mi Smart Band 4 features a 39.9% larger (than Mi Band 3) AMOLED color full-touch display with adjustable brightness, so everything is clear as can.</small>
+                    <p>Event Bulanan</p>
+                    <h1>AYAM EMBER FAVORIT kini lebih hemat! </h1>
+                    <small>Yuk, cobain AYAM EMBER FAVORIT dengan harga lebih hemat! Dapatkan 8 potong ayam goreng crispy, 4 nasi putih, 4 saus sambal, dan 4 teh botol sosro hanya dengan Rp 75.000,- (harga belum termasuk pajak). Promo ini berlaku di seluruh outlet KFC Indonesia untuk pembelian via dine in, take away, delivery, dan drive thru. Promo berlaku dari tanggal 1 - 30 Juni 2025. Ayo buruan beli sebelum kehabisan!</small>
                     <a href="" class="btn">Buy Now &#8594;</a>
                 </div>
             </div>
@@ -361,6 +388,8 @@
             }
         }
     </script>
+
+    <script src="src/cart.js"></script>
 
 
 

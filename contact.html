@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Products | ZeyyStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html">
+                <img src="images/cart.png" width="30px" height="30px">
+                <span id="cartBadge">0</span>
+            </a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+     <!-- -------- Contact Section -------- -->
+     <div class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2>Visit one of our agency locations or contact us today</h2>
+                <h3>Head Office</h3>
+                <p><i class="fa fa-map-marker"></i> 56 Glassford Street, Glasgow G1 1UL, New York</p>
+                <p><i class="fa fa-envelope"></i> contact@example.com</p>
+                <p><i class="fa fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fa fa-clock-o"></i> Monday to Saturday: 9.00am to 4.00pm</p>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.505713548831!2d110.79323667506327!3d-7.736058092282382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a399d2abe99e1%3A0xd2318d0e344906bb!2sPasar%20Tawangsari!5e0!3m2!1sid!2sid!4v1758976564008!5m2!1sid!2sid"width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------- Contact Form -------- -->
+    <div class="contact-form">
+        <div class="container">
+            <h2>We love to hear from you</h2>
+
+            <div class="form-layout">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit</button>
+                </form>
+
+                <div class="contact-persons">
+                    <div class="person">
+                        <img src="images/user-1.png" alt="Sean Parker">
+                        <div class="person-info">
+                            <strong>Sean Parker</strong>
+                            Senior Marketing Manager<br>
+                            Phone: +000 123 000 77 88<br>
+                            Email: contact@example.com
+                        </div>
+                    </div>
+                    <div class="person">
+                        <img src="images/user-2.png" alt="Mike Smith">
+                        <div class="person-info">
+                            <strong>Mike Smith</strong>
+                            Senior Marketing Manager<br>
+                            Phone: +000 123 000 77 88<br>
+                            Email: contact@example.com
+                        </div>
+                    </div>
+                    <div class="person">
+                        <img src="images/user-3.png" alt="Mabel Joe">
+                        <div class="person-info">
+                            <strong>Mabel Joe</strong>
+                            Senior Marketing Manager<br>
+                            Phone: +000 123 000 77 88<br>
+                            Email: contact@example.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- -------- footer ----------->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many. </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                      <li>Coupons</li>
+                      <li>Blog Post</li>
+                      <li>Return Policy</li>
+                      <li>Join Affiliate</li>
+                    </ul>
+                </div>                  
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                      <li>Facebook</li>
+                      <li>Tik Tok</li>
+                      <li>Instagram</li>
+                      <li>Telegram</li>
+                    </ul>
+                </div>                  
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2025 - Easy Tutorials</p>
+        </div>
+    </div>
+
+    <!-- --------js for toggle menu--------- -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else
+            {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+<script src="src/cart.js"></script>
+
+</body>
+</html>

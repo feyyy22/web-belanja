@@ -24,9 +24,8 @@ function renderCart() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const table = document.getElementById("cart-items");
 
-  if (!table) return; // kalau bukan di cart.html, stop
+  if (!table) return; 
 
-  // header tabel
   table.innerHTML = `
     <tr>
       <th>Product</th>
