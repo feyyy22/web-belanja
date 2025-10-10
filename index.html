@@ -31,63 +31,65 @@
                 </a>
                 <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
-      <!-- Search -->
-      <div class="search-container">
-        <button id="search-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-            </svg>  
-        </button>
-        <input type="text" id="search-input" placeholder="Search..." />
-      </div>
-    </nav>
-  </header>
+     
 
   <!-- Slider -->
   <div class="slider">
     <div class="list">
-      <div class="item active">
-        <img src="images/DISKON AYAM.jpg" alt="">
+      <div class="item">
         <div class="overlay"></div>
         <div class="info">
         </div>
       </div>
       <div class="item">
-        <img src="images/DISKON BURGER.jpg" alt="">
         <div class="overlay"></div>
-        <div class="info">
-         
+        <div class="info">  
         </div>
       </div>
       <div class="item">
-        <img src="imageS/DISKON ICE CEREM.jpg" alt="">
         <div class="overlay"></div>
         <div class="info">
-          
-        </div>
-      </div>
-      <div class="item">
-        <img src="images/DISKON JUS.jpg" alt="">
-        <div class="overlay"></div>
-        <div class="info">
-         
         </div>
       </div>
     </div>
-
-     <!-- arrows -->
-     <div class="arrows">
-        <button id="prev"><</button>
-        <button id="next">></button>
+      <!-- -------- promo slider --------- -->
+<div class="slider-container">
+    <div class="slider" id="slider">
+      <div class="slide">
+        <img src="images/promo.png" alt="Promo 1">
+        <div class="slide-content">
+          <h2>Diskon Spesial 50%</h2>
+          <p>Belanja lebih hemat untuk semua produk busana muslim pilihan minggu ini!</p>
+          <a href="products.html" class="btn">Lihat Promo</a>
+        </div>
       </div>
-
-    <!-- Thumbnails -->
-    <div class="thumbnail">
-      <div class="item active"><button></div>
-      <div class="item"><button></div>
-      <div class="item"><button></div>
-      <div class="item"><button></div>
+  
+      <div class="slide">
+        <img src="images/grastisongkir.png" alt="Promo 2">
+        <div class="slide-content">
+          <h2>Gratis Ongkir Sepuasnya</h2>
+          <p>Dapatkan pengiriman gratis ke seluruh Indonesia tanpa minimal belanja!</p>
+          <a href="products.html" class="btn">Belanja Sekarang</a>
+        </div>
+      </div>
+  
+      <div class="slide">
+        <img src="images/flashsale.png" alt="Promo 3">
+        <div class="slide-content">
+          <h2>Flash Sale Hari Ini</h2>
+          <p>Produk pilihan dengan harga super murah! Jangan sampai kehabisan~</p>
+          <a href="products.html" class="btn">Cek Sekarang</a>
+        </div>
+      </div>
     </div>
+  
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+  
                 <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
             <div class="row">
@@ -446,9 +448,75 @@
             }
         }
     </script>
+    <script>
+    const slider = document.getElementById('slider');
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const slideCount = slides.length;
+    const slideDuration = 5000; 
+  
+    const firstClone = slides[0].cloneNode(true);
+    slider.appendChild(firstClone);
+  
+    let index = 0;
+    let interval;
+  
+    function updateDots(i) {
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[i % slideCount].classList.add('active');
+    }
+  
+    function nextSlide() {
+      index++;
+      slider.style.transition = 'transform 0.6s ease';
+      slider.style.transform = `translateX(${-index * 100}%)`;
+  
+      if (index === slideCount) {
+        setTimeout(() => {
+          slider.style.transition = 'none';
+          slider.style.transform = `translateX(0)`;
+          index = 0;
+        }, 600); 
+      }
+  
+      updateDots(index);
+    }
+  
+    function startAutoSlide() {
+      interval = setInterval(nextSlide, slideDuration);
+    }
+  
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        clearInterval(interval);
+        index = i;
+        slider.style.transition = 'transform 0.5s ease';
+        slider.style.transform = `translateX(${-index * 100}%)`;
+        updateDots(i);
+        startAutoSlide();
+      });
+    });
+  
+    let startX = 0;
+    slider.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+    slider.addEventListener('touchend', e => {
+      let endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) nextSlide();
+      else if (endX - startX > 50) {
+        index = index <= 0 ? slideCount - 1 : index - 1;
+        slider.style.transition = 'transform 0.5s ease';
+        slider.style.transform = `translateX(${-index * 100}%)`;
+        updateDots(index);
+      }
+      clearInterval(interval);
+      startAutoSlide();
+    });
+  
+    startAutoSlide();
+  </script>
+  
 
     <script src="src/cart.js"></script>
-    <script src="index.js"></script>
 
 
 </body>
